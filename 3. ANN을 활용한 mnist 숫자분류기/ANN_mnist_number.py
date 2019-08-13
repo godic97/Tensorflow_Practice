@@ -17,6 +17,7 @@ x = tf.compat.v1.placeholder(tf.float32, shape=[None, input_size])
 y = tf.compat.v1.placeholder(tf.float32, shape=[None, output_size])
 
 # MLP 정의 1개의 입력층, 2개의 은닉층, 1개의 출력층
+# 활성함수: ReLU
 def build_ANN(x):
     W1 = tf.Variable(tf.random.normal(shape=[input_size, hidden1_size]))
     b1 = tf.Variable(tf.random.normal(shape=[hidden1_size]))
